@@ -751,3 +751,91 @@ Inspired by @naveed.zafar at https://leetcode.com/discuss/10947/accepted-c-o-n-s
 //    }
 //}
 
+//Map Array
+//let someArray: [Int]? = [1,2,3]
+//let result = someArray.map{"No.\($0)"}
+//result
+
+// >
+//let intArray: [Int] = [3,2,65,4,35,78,65]
+//intArray.sort(>)
+
+//Map
+//let dict = [1:"一",2:"二",3:"三",4:"四",5:"五",6:"六",7:"七",8:"八",9:"九",0:"零"]
+//let intArray = [23,457,89,321,7,54,17]
+//
+//intArray.map { (var number: Int) -> String in
+//    var result: String = ""
+//
+//    while number > 0 {
+//        result = dict[number % 10]! + result
+//        number /= 10
+//    }
+//
+//    return result
+//}
+
+//Int8 & UInt8
+Int8.max
+Int8.min
+UInt8.max
+UInt8.min
+
+//Int16 & UInt16
+Int16.max
+Int16.min
+UInt16.max
+UInt16.min
+
+//Int32 & UInt32
+Int32.max
+Int32.min
+UInt32.max
+UInt32.min
+
+//Int64 & UInt64
+Int64.max
+Int64.min
+UInt64.max
+UInt64.min
+
+//Swift 2.0
+//for case let i in 1...100 where i % 3 == 0 {
+//    print("\(i)")
+//}
+
+//x^4 - y^2 = 15*x*y
+//findAnwser: for m in 1...300 {
+//    for n in 1...300 {
+//        if m*m*m*m - n*n == 15 * m * n {
+//            print("\(m , n)")
+//            break findAnwser
+//        }
+//    }
+//}
+
+//var t2 = 2
+//switch t2 {
+//case 1:
+//    print("贯穿：1")
+//    fallthrough
+//case 2:
+//    print("贯穿：2")
+//    fallthrough
+//case 3:
+//    print("贯穿：3")
+//    fallthrough
+//default:
+//    print("贯穿default")
+//}
+
+//func test(name str : String , age n : Int) -> Void {
+//    print("\(str),\(n)")
+//    if n > 20 {
+//        return
+//    }
+//    print("test")
+//}
+//
+//test(name: "dzl", age: 25)
+
