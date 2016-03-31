@@ -776,28 +776,28 @@ Inspired by @naveed.zafar at https://leetcode.com/discuss/10947/accepted-c-o-n-s
 //}
 
 //Int8 & UInt8
-Int8.max
-Int8.min
-UInt8.max
-UInt8.min
+//Int8.max
+//Int8.min
+//UInt8.max
+//UInt8.min
 
 //Int16 & UInt16
-Int16.max
-Int16.min
-UInt16.max
-UInt16.min
+//Int16.max
+//Int16.min
+//UInt16.max
+//UInt16.min
 
 //Int32 & UInt32
-Int32.max
-Int32.min
-UInt32.max
-UInt32.min
+//Int32.max
+//Int32.min
+//UInt32.max
+//UInt32.min
 
 //Int64 & UInt64
-Int64.max
-Int64.min
-UInt64.max
-UInt64.min
+//Int64.max
+//Int64.min
+//UInt64.max
+//UInt64.min
 
 //Swift 2.0
 //for case let i in 1...100 where i % 3 == 0 {
@@ -838,4 +838,54 @@ UInt64.min
 //}
 //
 //test(name: "dzl", age: 25)
+
+// % 区别于C、C++、Java, Swfit小数也可以作余数运算
+//let a: Float = 2.5
+//let b: Float = 1.2
+//a % b
+
+//var arr = ["王子辰","胡成龙","苏大伟","王乾昊","刘静雯","朱万鹏","秦鑫"]
+//for name in arr {
+//    var people = name
+//    
+//}
+
+//var i = -2.6
+//for ; i < 2.6;  {
+//    i += 0.1
+//    sin(i)
+//}
+
+// repeat while
+//repeat {
+//    var a = arc4random_uniform(10)
+//    var b = arc4random_uniform(10)
+//    
+//    if a == b {
+//        print("draw")
+//        continue
+//    }
+//    
+//    print("a = \(a)     b = \(b)")
+//    
+//    let winner: String = a > b ? "a":"b"
+//    if winner == "a" {
+//        print("a获胜")
+//    } else {
+//        print("b获胜")
+//    }
+//    break
+//    
+//}while true
+
+//switch ()
+//var y = true
+//switch y {
+//case true:
+//    ()
+//case false:
+//    ()
+//}
+
+
 
