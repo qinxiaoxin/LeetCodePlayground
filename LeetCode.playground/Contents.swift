@@ -887,5 +887,35 @@ Inspired by @naveed.zafar at https://leetcode.com/discuss/10947/accepted-c-o-n-s
 //    ()
 //}
 
+//let s = "\"string\""
+//var str = "Hello World"
+//let mark: Character = "!"
+//str.append(mark)
 
+//let englishLetter: Character = "a"
+//let chineseLetter: Character = "秦"
+//let dog: Character = "🐶"
+//let coolGuy: Character = "\u{1F60E}"
+//
+//let chineseLetters: String = "闷声发大财"
+//chineseLetters.characters.count
 
+//var str = "Hello, Swift2.2"
+//
+//let startIndex = str.startIndex
+//let endIndex = str.endIndex
+//let range = startIndex...endIndex.predecessor()
+//
+//let endHello = startIndex.advancedBy(4)
+//let rangHello = startIndex...endHello
+//str.replaceRange(rangHello, with: "Hi")
+//
+//str.removeRange(str.endIndex.advancedBy(-2)...str.endIndex.predecessor())
+//str.appendContentsOf(".2")
+//str.insert("🐶", atIndex: rangHello.endIndex.predecessor())
+//
+//str.containsString(", 🐶")
+
+//var str = "     ------ Hello World --------    "
+//str = (str as NSString).stringByTrimmingCharactersInSet(NSCharacterSet(charactersInString: " - "))
+//str.uppercaseString
