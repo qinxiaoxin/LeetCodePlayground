@@ -829,26 +829,12 @@ Inspired by @naveed.zafar at https://leetcode.com/discuss/10947/accepted-c-o-n-s
 //    print("贯穿default")
 //}
 
-//func test(name str : String , age n : Int) -> Void {
-//    print("\(str),\(n)")
-//    if n > 20 {
-//        return
-//    }
-//    print("test")
-//}
-//
 //test(name: "dzl", age: 25)
 
 // % 区别于C、C++、Java, Swfit小数也可以作余数运算
 //let a: Float = 2.5
 //let b: Float = 1.2
 //a % b
-
-//var arr = ["王子辰","胡成龙","苏大伟","王乾昊","刘静雯","朱万鹏","秦鑫"]
-//for name in arr {
-//    var people = name
-//    
-//}
 
 //var i = -2.6
 //for ; i < 2.6;  {
@@ -919,3 +905,69 @@ Inspired by @naveed.zafar at https://leetcode.com/discuss/10947/accepted-c-o-n-s
 //var str = "     ------ Hello World --------    "
 //str = (str as NSString).stringByTrimmingCharactersInSet(NSCharacterSet(charactersInString: " - "))
 //str.uppercaseString
+
+
+/**
+   第一届Swift大会
+ */
+//var someArray: [Int]?
+//someArray = [1,2,3]
+//let some = someArray.map { ("No.\($0)") }
+//print(some)
+
+//enum
+//enum TransportModel: String {
+//    case Airplane = "✈️"
+//    case Boat = "🚢"
+//    case Truck = "🚚"
+//    case Rocket = "🚀"
+//}
+//
+//let t = TransportModel.Rocket
+//t.rawValue
+
+//使用 mutating 关键字修饰方法是为了能在该方法中修改 struct 或是 enum 的变量
+//protocol ExampleProtocol {
+//    var simpleDescription: String { get }
+//    mutating func adjust()
+//}
+//
+//class SimpleClass: ExampleProtocol {
+//    var simpleDescription: String = "A very simple class"
+//    var anotherProperty: Int = 110
+//    // 在 class 中实现带有mutating方法的接口时，不用mutating进行修饰。因为对于class来说，类的成员变量和方法都是透明的，所以不必使用 mutating 来进行修饰
+//    func adjust() {
+//        simpleDescription += " Now 100% adjusted"
+//    }
+//}
+//
+//struct SimpleStruct: ExampleProtocol {
+//    var simpleDescription: String = "A simple structure"
+//    mutating func adjust() {
+//        simpleDescription += "(adjusted)"
+//    }
+//}
+//
+//enum SimpleEnum: ExampleProtocol {
+//    case First, Second, Third
+//    var simpleDescription: String {
+//        get {
+//            switch self {
+//            case .First:
+//                return "first"
+//            case .Second:
+//                return "second"
+//            case .Third:
+//                return "third"
+//            }
+//        }
+//        
+//        set {
+//            simpleDescription = newValue
+//        }
+//    }
+//    
+//    mutating func adjust() {
+//        simpleDescription += "(adjusted)"
+//    }
+//}
