@@ -971,3 +971,14 @@ Inspired by @naveed.zafar at https://leetcode.com/discuss/10947/accepted-c-o-n-s
 //        simpleDescription += "(adjusted)"
 //    }
 //}
+
+//let arrInt = [1,2,3,4,5,6,7,8,9]
+//let arrStr = arrInt.map(String.init)
+
+
+//let errorCode: String? = "404"
+//let errorMessage: String? = "Not Found Page"
+//
+//if let errorCode = errorCode, errorMessage = errorMessage where errorCode == "404" {
+//    print(errorMessage)
+//}
