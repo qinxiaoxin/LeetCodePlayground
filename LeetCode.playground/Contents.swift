@@ -982,3 +982,179 @@ Inspired by @naveed.zafar at https://leetcode.com/discuss/10947/accepted-c-o-n-s
 //if let errorCode = errorCode, errorMessage = errorMessage where errorCode == "404" {
 //    print(errorMessage)
 //}
+
+//var errorMessage: String? = nil
+//
+//let message: String
+//if let errorMessage = errorMessage {
+//    message = errorMessage
+//} else {
+//    message = "No Error"
+//}
+//
+//let message2 = errorMessage == nil ? "No Error" : errorMessage
+//
+//let message3 = errorMessage ?? "No Error"
+
+//var ageInput: String = "16"
+//
+//var age = Int( ageInput )
+//
+//if let age = Int(ageInput) where age < 20 {
+//    print("You're a teenager!")
+//}
+//
+//var greetings = "Hello"
+//greetings.rangeOfString("ll")
+
+//class City {
+//    let cityName: String
+//    let country: Country
+//    
+//    init(cityName: String, country: Country) {
+//        self.cityName = cityName
+//        self.country = country
+//    }
+//}
+//
+//class Country {
+//    let countryName: String
+//    var capitalCity: City!
+//    
+//    init(countryName: String, capitalCity: String) {
+//        self.countryName = countryName
+//        self.capitalCity = City(cityName: capitalCity, country: self)
+//    }
+//    
+//    func showInfo() {
+//        print("This is \(countryName)")
+//        print("It's capital is \(capitalCity.cityName)")
+//    }
+//}
+//
+//let country = Country(countryName: "China", capitalCity: "Peking")
+//country.showInfo()
+
+//let numbers = [1,2,3,4,5]
+//let vowels = ["A","E","I","O","U"]
+//
+//numbers.minElement()
+//vowels.maxElement()
+//
+//for (i,vowel) in vowels.enumerate() {
+//    print("\(i+1): \(vowel)")
+//}
+
+//let setNumbers: Set<Int> = [2,5,4,6,7]
+//let setNums: Set<Int> = [2,5,4,7,6]
+//setNums == setNumbers
+//
+//let arrayNumbers: Array<Int> = [2,5,4,6,7]
+//let arrayNums: Array<Int> = [2,5,4,7,6]
+//arrayNumbers == arrayNums
+
+//var board = [[1024,16,2,0],[256,4,2,0],[64,2,0,0],[2,0,0,0]]
+//board.append([0,0,0,0])
+//board += [[0,0,0,0]]
+
+//func mutiply (num1: Int, _ num2: Int) -> Int {
+//    return num1 * num2
+//}
+//
+//mutiply(2, 4)
+//
+//func sayHelloTo (name: String, withGreetingWord greeting: String) -> String {
+//    return "\(name) \(greeting)"
+//}
+//
+//sayHelloTo("Jim", withGreetingWord: "Happy Birthday")
+//
+//func mean (numbers: Double ...) -> Double {
+//    var sum: Double = 0;
+//    
+//    for number in numbers {
+//        sum += number
+//    }
+//    
+//    return sum / Double (numbers.count)
+//}
+//
+//mean(2,4,5)
+//
+//func sayHelloTo (names: String ... , withGreetingWord greeting: String, punctuation: String) {
+//    print("\(names) \(greeting) \(punctuation)")
+//}
+//sayHelloTo("A","B","C", withGreetingWord: "Hello", punctuation: "!")
+//
+//func toBinary ( var num: Int) -> String {
+//    var res = ""
+//    repeat {
+//        res = String (num % 2) + res
+//        num /= 2
+//    } while num != 0
+//    return res
+//}
+//
+//toBinary(8)
+//
+//func swapTwoInts(inout num1: Int, inout _ num2: Int) {
+////    let t = num1
+////    num1 = num2
+////    num2 = t
+//    (num1, num2) = (num2, num1)
+//}
+//
+//var x = 1
+//var y = 2
+//swapTwoInts(&x, &y)
+////swap(&x, &y)
+//x
+//y
+//
+//func intArray (inout array: [Int], by value: Int) {
+//    for i in 0..<array.count {
+//        array[i] = value
+//    }
+//}
+//
+//var arr = [1,2,3,4,5]
+//intArray(&arr, by: 0)
+//arr
+
+//var arrRandom:[Int] = []
+//for _ in 0..<100 {
+//    arrRandom.append(random()%1000)
+//}
+//
+////arrRandom.sortInPlace()
+////
+////let arr = arrRandom.sort { (a, b) -> Bool in
+////    return a > b
+////}
+////arr
+//
+//let arr = arrRandom.sort { (a, b) -> Bool in
+//    return abs(a - 500) < abs(b - 500)
+//}
+//arr
+
+//let scores: [Int] = [1,2,3,4,5]
+//for (index, score) in scores.enumerate() {
+//    
+//}
+
+//let scores: [Int] = [65, 91, 45, 97, 87, 72, 33]
+//func isPassOrFail(score: Int) -> String {
+//    return score < 60 ? "Fail" : "Pass"
+//}
+//func pass(score: Int) -> Bool {
+//    return score > 60
+//}
+//func add(num1: Int, _ num2: Int) -> Int {
+//    return num1 + num2
+//}
+//scores.map(isPassOrFail)
+//scores.filter(pass)
+//scores.reduce(0, combine: +)
+//scores.reduce(0, combine: add)
+
