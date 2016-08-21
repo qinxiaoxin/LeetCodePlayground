@@ -1126,12 +1126,10 @@ Inspired by @naveed.zafar at https://leetcode.com/discuss/10947/accepted-c-o-n-s
 //    arrRandom.append(random()%1000)
 //}
 //
-////arrRandom.sortInPlace()
-////
-////let arr = arrRandom.sort { (a, b) -> Bool in
-////    return a > b
-////}
-////arr
+//arrRandom.sortInPlace()
+//
+//let arr = arrRandom.sort(>)
+//arr
 //
 //let arr = arrRandom.sort { (a, b) -> Bool in
 //    return abs(a - 500) < abs(b - 500)
@@ -1158,3 +1156,143 @@ Inspired by @naveed.zafar at https://leetcode.com/discuss/10947/accepted-c-o-n-s
 //scores.reduce(0, combine: +)
 //scores.reduce(0, combine: add)
 
+//func runningMetersWithMetersPerDay( metersPerDay: Int) -> () -> Int {
+//    var totalMeters = 0;
+//    return {
+//        totalMeters += metersPerDay
+//        return totalMeters
+//    }
+//}
+//
+//let planA = runningMetersWithMetersPerDay(2000)
+//planA()
+//planA()
+//
+//let planB = runningMetersWithMetersPerDay(5000)
+//planB()
+//planB()
+//
+//let anotherPlan = planB
+//anotherPlan()
+//planB()
+
+//enum Month: Int {//有限个可能性
+//    case January = 1, February, March, April, May, June, July, August, September, October, November, December
+//    
+//}
+//
+//func monthsBeforeNewYear(month: Month) -> Int {
+//    return 12 - month.rawValue
+//}
+//
+//let input = 4
+//if let month = Month(rawValue: input) {
+//    monthsBeforeNewYear(month)
+//}
+
+// Associate Value
+//enum ATMStatus {
+//    case Success(Int)
+//    case Error(String)
+//}
+//
+//var balance = 1000
+//
+//func withdraw (amount: Int) -> ATMStatus {
+//    if balance >= amount {
+//        balance -= amount
+//        return .Success(balance)
+//    } else {
+//        return .Error("Not enough money")
+//    }
+//}
+//
+//let result = withdraw(900)
+//switch result {
+//case let .Success(newBalance):
+//    print("\(newBalance) Yuan left in your account")
+//case let .Error(errorMessage):
+//    print("Error: \(errorMessage)")
+//}
+
+//enum Shape {
+//    case Square(side: Double)
+//    case Rectangle(width: Double, height: Double)
+//    case Circle(centerx: Double, centery: Double, radius: Double)
+//    case Point
+//}
+//
+//let square = Shape.Square(side: 10)
+//let rectangle = Shape.Rectangle(width: 20, height: 30)
+//let circle = Shape.Circle(centerx: 0, centery: 0, radius: 15)
+//let point = Shape.Point
+//
+//func area(shape: Shape) -> Double {
+//    switch shape {
+//    case let .Square(side):
+//         return side * side
+//    case let .Rectangle(width, height):
+//        return width * height
+//    case let .Circle(_, _, r):
+//        return M_PI * r * r
+//    case .Point:
+//        return 0
+//    }
+//}
+//
+//area(square)
+//area(rectangle)
+//area(circle)
+//area(point)
+
+//var website: Optional<String> = Optional.Some("swift")
+
+//indirect enum ArithmeticExpression {
+//    case Number(Int)
+//    case Addition(ArithmeticExpression, ArithmeticExpression)
+//    case Multiplication(ArithmeticExpression, ArithmeticExpression)
+//}
+//
+////(5 + 4) * 2
+//let five = ArithmeticExpression.Number(5)
+//let four = ArithmeticExpression.Number(4)
+//let sum = ArithmeticExpression.Addition(five, four)
+//let two = ArithmeticExpression.Number(2)
+//let product = ArithmeticExpression.Multiplication(sum, two)
+//
+//func evaluate(expression: ArithmeticExpression) -> Int {
+//    switch expression {
+//    case let .Number(value):
+//        return value
+//    case let .Addition(left, right):
+//        return evaluate(left) + evaluate(right)
+//    case let .Multiplication(left, right):
+//        return evaluate(left) * evaluate(right)
+//        
+//    }
+//}
+//
+//evaluate(product)
+
+//struct Location {
+//    let latitude: Double
+//    let longitude: Double
+//    
+//    init?(coordinateString: String) {
+//        guard
+//            let commaIndex = coordinateString.rangeOfString(",")?.startIndex,
+//            let firstElement = Double(coordinateString.substringToIndex(commaIndex)),
+//            let secondElement = Double(coordinateString.substringFromIndex(commaIndex.successor()))
+//        else {
+//            return nil
+//        }
+//        
+//        self.latitude = firstElement
+//        self.longitude = secondElement
+//        
+//    }
+//}
+
+
+
+  
