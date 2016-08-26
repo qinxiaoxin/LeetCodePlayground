@@ -1293,6 +1293,211 @@ Inspired by @naveed.zafar at https://leetcode.com/discuss/10947/accepted-c-o-n-s
 //    }
 //}
 
+//引用类型 let person person只是约束一个指针常量
 
+//struct Loccation {
+//    var x = 0;
+//    var y = 0;
+//    
+//    mutating func goEast() {
+//        self.x += 1;
+//    }
+//}
+//
+//enum Switch {
+//    case On
+//    case Off
+//    
+//    mutating func onClick() {
+//        switch self {
+//        case .On:
+//            self = .Off
+//        case .Off:
+//            self = .On
+//        }
+//    }
+//}
+//
+//var s = Switch.Off
+//s.onClick()
 
-  
+//type property  static
+
+//Type Property Methods
+//struct Matrix {
+//    var m: [[Int]]
+//    var row: Int
+//    var col: Int
+//    
+//    init?(_ arr2d:[[Int]]) {
+//        guard arr2d.count > 0 else {
+//            return nil
+//        }
+//        
+//        let row = arr2d.count
+//        let col = arr2d[0].count
+//        
+//        for i in 1..<row {
+//            if arr2d[i].count != row {
+//                return nil
+//            }
+//        }
+//        
+//        self.m = arr2d
+//        self.row = row
+//        self.col = col
+//    }
+//    
+//    func printMatrix() {
+//        for i in 0..<row {
+//            for j in 0..<col {
+//                print(m[i][j], terminator:"\t")
+//            }
+//            print()
+//        }
+//    }
+//    
+//    static func identityMatrix(n: Int) -> Matrix? {
+//        if n <= 0 {
+//            return nil
+//        }
+//        
+//        var arr2d:[[Int]] = []
+//        for i in 0..<n {
+//            var row = [Int](count: n, repeatedValue: 0)
+//            row[i] = 1
+//            arr2d.append(row)
+//        }
+//        
+//        return Matrix(arr2d)
+//    }
+//}
+//
+//if let m = Matrix([[1,2],[3,4]]) {
+//    m.printMatrix()
+//}
+//
+//if let e = Matrix.identityMatrix(6) {
+//    e.printMatrix()
+//}
+
+//Property Observer
+//class LightBulb {
+//    static let maxCurrent = 30
+//    var current = 0 {
+//        
+//        willSet {
+//            print("Current value changed. The change is \(abs(current - newValue))")
+//        }
+//        
+//        didSet {
+//            if current == LightBulb.maxCurrent {
+//                print("Pay attention")
+//            } else if current > LightBulb.maxCurrent {
+//                print("Current too high")
+//                current = oldValue
+//            }
+//            
+//            print("The current is \(current)")
+//        }
+//    }
+//}
+//
+//let bulb = LightBulb()
+//bulb.current = 20
+//bulb.current = 30
+//bulb.current = 60
+
+//enum Theme {
+//    case DayMode
+//    case NightMode
+//}
+//
+//class UI {
+//    var fontColor: UIColor!
+//    var backgroundColor: UIColor!
+//    var themeMode: Theme = .DayMode {
+//        didSet {
+//            self.changeTheme(themeMode)
+//        }
+//    }
+//    
+//    init(themeMode: Theme) {
+//        self.themeMode = themeMode
+//        self.changeTheme(themeMode)
+//    }
+//    
+//    func changeTheme(themeMode: Theme) {
+//        switch themeMode {
+//        case .DayMode:
+//            fontColor = UIColor.blackColor()
+//            backgroundColor = UIColor.whiteColor()
+//        case .NightMode:
+//            fontColor = UIColor.whiteColor()
+//            backgroundColor = UIColor.blackColor()
+//        }
+//    }
+//}
+//
+//let ui = UI(themeMode: .DayMode)
+//ui.themeMode
+//ui.fontColor
+//ui.backgroundColor
+//
+//ui.themeMode = .NightMode
+//ui.fontColor
+//ui.backgroundColor
+
+//Lazy Property 
+//class ClosedRange {
+//    
+//    let start: Int
+//    let end: Int
+//    
+//    var width: Int {
+//        return end - start + 1
+//    }
+
+    //计算属性
+//    var sum: Int {
+//        print("start computing sum value")
+//        var res = 0
+//        for i in self.start...self.end {
+//            res += i
+//        }
+//        return res
+//    }
+    //延迟属性
+//    lazy var sum: Int = {
+//       print("start computing sum value")
+//        var res = 0
+//        for i in self.start...self.end {
+//            res += i
+//        }
+//        return res
+//    }()
+//    
+//    init?(start: Int, end: Int) {
+//        if start > end {
+//            return nil
+//        }
+//        
+//        self.start = start
+//        self.end = end
+//    }
+//    
+//}
+//
+//if let c = ClosedRange(start: 0, end: 100) {
+//    c.sum
+//    c.sum
+//}
+
+//Single
+//let gm = GameManager.defaultGameManager
+//gm.addScore()
+//gm.score
+//
+//let ggmm = GameManager.defaultGameManager
+//ggmm.addScore()
+//ggmm.score
