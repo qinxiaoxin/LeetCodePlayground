@@ -1501,3 +1501,513 @@ Inspired by @naveed.zafar at https://leetcode.com/discuss/10947/accepted-c-o-n-s
 //let ggmm = GameManager.defaultGameManager
 //ggmm.addScore()
 //ggmm.score
+
+//
+//final class Magic {
+//    
+//}
+
+//struct Vector {
+//    var x: Double = 0.0
+//    var y: Double = 0.0
+//    var z: Double = 0.0
+//    
+//    subscript(index: Int) -> Double? {
+//        
+//        get {
+//            switch index {
+//            case 0: return x
+//            case 1: return y
+//            case 2: return z
+//            default: return nil
+//            }
+//        }
+//        
+//        set {
+//            guard let newValue = newValue else { return }
+//            
+//            switch index {
+//            case 0: x = newValue
+//            case 1: x = newValue
+//            case 2: x = newValue
+//            default: return
+//            }
+//        }
+//        
+//    }
+//    
+//    subscript(axis: String) -> Double? {
+//        
+//        get {
+//            switch axis {
+//            case "x", "X": return x
+//            case "y", "Y": return y
+//            case "z", "Z": return z
+//            default: return nil
+//            }
+//        }
+//        
+//        set {
+//            guard let newValue = newValue else { return }
+//            
+//            switch axis {
+//            case "x", "X": x = newValue
+//            case "y", "Y": y = newValue
+//            case "z", "Z": z = newValue
+//            default: return
+//            }
+//        }
+//        
+//    }
+//    
+//    func length() -> Double {
+//        return sqrt( x * x + y * y + z * z)
+//    }
+//}
+
+//var v = Vector(x: 1.0, y: 2.0, z: 3.0)
+//v[2]
+//v["y"] = 200
+//v[0] = 100
+//
+//let va = Vector(x: 1.0, y: 2.0, z: 3.0)
+//let vb = Vector(x: 4.0, y: 5.0, z: 6.0)
+
+//func + (left: Vector, right: Vector) -> Vector {
+//    return Vector(x: left.x + right.x, y: left.y + right.y, z: left.z + right.z)
+//}
+////va + vb
+//
+//prefix func - (vector: Vector) -> Vector {
+//    return Vector(x: -vector.x, y: -vector.y, z: -vector.z)
+//}
+////-va
+//
+//func < (left: Vector, right: Vector) -> Bool {
+//    if left.x != right.x { return left.x < right.x }
+//    if left.y != right.y { return left.y < right.y }
+//    if left.z != right.z { return left.z < right.z }
+//    
+//    return false
+//}
+//
+//func += ( left: inout Vector, right: Vector) {
+//    left = left + right
+//}
+//
+//func * (left: Vector, a: Double) -> Vector {
+//    return Vector(x: left.x * a, y: left.y * a, z: left.z * a)
+//}
+//
+//func * (left: Vector, right: Vector) -> Double {
+//    return left.x * right.x + left.y * right.y + left.z * right.z
+//}
+//
+//postfix operator +++
+//postfix func +++( vector: inout Vector) -> Vector {
+//    let ret = vector
+//    vector += Vector(x: 1.0, y: 1.0, z: 1.0)
+//    return ret
+//}
+//
+//var vector = Vector(x: 2.0, y: 3.0, z: 4.0)
+//vector+++
+//vector
+//
+//prefix operator +++
+//prefix func +++ (vector: inout Vector) -> Vector {
+//    vector += Vector(x: 1.0, y: 1.0, z: 1.0)
+//    return vector
+//}
+//
+//+++vector
+//
+//infix operator ^
+//func ^ (left: Vector, right: Vector) -> Double {
+//    return acos( ( left * right) / (left.length() * right.length()))
+//}
+//
+//let vb = Vector(x: 4.0, y: 5.0, z: 6.0)
+//vector ^ vb
+//
+//infix operator ** : ooxx
+//precedencegroup ooxx {
+//    associativity: left
+//    higherThan: MultiplicationPrecedence
+//}
+//func **(x: Double, y: Double) -> Double {
+//    return pow(x, y)
+//}
+//
+//5*2**3**2
+
+//struct Matrix {
+//    var data: [[Double]]
+//    let r: Int
+//    let c: Int
+//    
+//    init(row: Int, col: Int) {
+//        self.r = row
+//        self.c = col
+//        data = [[Double]]()
+//        for _ in 0..<r {
+//            let aRow = Array(repeating: 0.0, count: col)
+//            data.append(aRow)
+//        }
+//    }
+//    
+//    subscript(x: Int, y: Int) -> Double {
+//        
+//        get {
+//            assert(x >= 0 && x < r && y >= 0 && y < c, "Index Out of Range")
+//            return data[x][y]
+//        }
+//        
+//        set {
+//            assert(x >= 0 && x < r && y >= 0 && y < c, "Index Out of Range")
+//            return data[x][y] = newValue
+//        }
+//        
+//    }
+//    
+//    subscript (row: Int) -> [Double] {
+//        get {
+//            assert( row >= 0 && row < r, "Index Out of Range")
+//            return data[row]
+//        }
+//        
+//        set {
+//            assert( newValue.count == c, "Column Number does NOT match" )
+//            return data[row] = newValue
+//        }
+//    }
+//}
+//
+//var m = Matrix(row: 2, col: 2)
+//m[1,1] = 3
+
+//let arr = [1,2,3,4]
+//arr.reduce(arr[0], *)
+
+//struct Point {
+//    var x = 0.0
+//    var y = 0.0
+//}
+//
+//struct Size {
+//    var width = 0.0
+//    var height = 0.0
+//}
+//
+//class Rectangle {
+//    var origin = Point()
+//    var size = Size()
+//    
+//    init (origin: Point, size: Size) {
+//        self.origin = origin
+//        self.size = size
+//    }
+//    
+//}
+//
+//extension Rectangle {
+//    
+//    enum Vertex: Int {
+//        case LeftTop
+//        case RightTop
+//        case LeftBottom
+//        case RightBottom
+//    }
+//    
+//    func pointAtVertex(v: Vertex) -> Point {
+//        switch v {
+//        case .LeftTop:
+//            return origin
+//        case .RightTop:
+//            return Point(x:origin.x + size.width, y: origin.y)
+//        case .LeftBottom:
+//            return Point(x:origin.x, y: origin.y + size.height)
+//        case .RightBottom:
+//            return Point(x:origin.x + size.width, y: origin.y + size.height)
+//        }
+//    }
+//    
+//    subscript (index: Int) -> Point {
+//        assert(index >= 0 && index < 4, "Index in Rectangle Out of Range")
+//        
+//        return pointAtVertex(v: Vertex(rawValue: index)!)
+//    }
+//    
+//}
+//
+//let rect = Rectangle(origin: Point(), size: Size(width: 3, height: 4))
+//rect[0]
+//rect[1]
+//rect[2]
+//rect[3]
+
+//extension Int {
+//    var square: Int {
+//        return self * self
+//    }
+//    
+//    var cube: Int {
+//        return self * self * self
+//    }
+//    
+//    func repetitions(task: () -> Void) {
+//        for _ in 0..<self {
+//            task()
+//        }
+//    }
+    
+//    subscript(index: Int) -> Int {
+////        var decimalBase = 1
+////        for _ in 1...index {
+////            decimalBase *= 10
+////        }
+////        return (self / decimalBase) % 10
+//        
+//        var s = String(self)
+//        let l = s.characters.count - 1
+//        
+//        var decimalBase = 1
+//        for _ in 1...l - index {
+//            decimalBase *= 10
+//        }
+//        return (self / decimalBase) % 10
+//        
+//    }
+//    
+//}
+//
+//678437[2]
+
+//let a = 9
+//a.square
+//
+//a.repetitions { 
+//    print("蛤膜")
+//}
+//
+//for i in stride(from:0, to: a, by: 2) {
+//    print("i = \(i)")
+//}
+
+//func swapTwoThing<T>( a: inout T, _ b: inout T) {
+//    (a,b) = (b,a)
+//}
+//
+//var a = "hello"
+//var b = "bye"
+//swapTwoThing(a: &a, &b)
+//a
+//b
+
+//extension Double {
+//    var km: Double {
+//        return self * 1000
+//    }
+//    
+//    var m: Double {
+//        return self
+//    }
+//    
+//    var cm: Double {
+//        return self / 100
+//    }
+//    
+//    var ft: Double {
+//        return  self / 3.28084
+//    }
+//}
+//
+//let distance: Double = 3.14.km
+
+//protocol WeightCaculated {
+//    associatedtype WeightType
+//    var weight: WeightType { get }
+//}
+//
+//class iPhone7: WeightCaculated {
+//    typealias WeightType = Double
+//    var weight: WeightType {
+//        return 0.117
+//    }
+//}
+
+//struct Records: Equatable, Comparable, CustomStringConvertible {
+//    var wins: Int
+//    var loses: Int
+//    
+//    var description: String {
+//        return "Wins: " + String(wins) + ", Loses: " + String(loses)
+//    }
+//    
+//    static func == (left: Records, right: Records) -> Bool {
+//        return left.wins == right.wins && left.loses == right.loses
+//    }
+//    
+//    static func < (left: Records, right: Records) -> Bool {
+//        if left.wins != right.wins {
+//            return left.wins < right.wins
+//        } else {
+//            return left.loses > right.loses
+//        }
+//    }
+//    
+//}
+//
+//
+//let recordA = Records(wins: 10, loses: 5)
+//let recordB = Records(wins: 10, loses: 3)
+//
+//recordA > recordB
+//
+//print(recordA)
+
+//protocol Record: CustomStringConvertible {
+//    var wins: Int{get}
+//    var loses: Int{get}
+//}
+//
+//extension Record {
+//    var description: String {
+//        return "wins: \(wins)" + " " + "loses: \(loses)"
+//    }
+//    
+//    func shootWins() -> String {
+//        return "shootWins = \(wins)"
+//    }
+//    
+//    var gamePlayed: Int {
+//        return wins + loses
+//    }
+//    
+//    func winningPercent() -> Double {
+//        return Double(wins) / Double(gamePlayed)
+//    }
+//    
+//}
+//
+//extension CustomStringConvertible {
+//    var descriptionWithDate: String {
+//        return NSDate().description + " | " + description
+//    }
+//}
+//
+//protocol TiesAbled {
+//    var ties: Int{get set}
+//}
+//
+//extension Record where Self: TiesAbled {
+//    var gamePlayed: Int {
+//        return wins + loses + ties
+//    }
+//    
+//    func winningPercent() -> Double {
+//        return Double(wins) / Double(gamePlayed)
+//    }
+//}
+//
+//protocol Prizable {
+//    func isPrizable() -> Bool
+//}
+//
+//
+//
+//struct BasketballRecord: Record, Prizable {
+//    var wins: Int
+//    var loses: Int
+//    
+//    func isPrizable() -> Bool {
+//        return gamePlayed > 10 && winningPercent() > 0.5
+//    }
+//}
+//
+//struct FootballRecord: Record, TiesAbled, Prizable {
+//    var wins: Int
+//    var loses: Int
+//    var ties: Int
+//    
+//    func isPrizable() -> Bool {
+//        return wins > 1
+//    }
+//}
+//
+//let basketball = BasketballRecord(wins: 9, loses: 2)
+//basketball.winningPercent()
+//basketball.shootWins()
+//basketball.gamePlayed
+////print(basketball.descriptionWithDate)
+//
+//let football = FootballRecord(wins: 5, loses: 2, ties: 3)
+//football.winningPercent()
+//football.shootWins()
+//football.gamePlayed
+
+//func award(one: Prizable & CustomStringConvertible) {
+//    if one.isPrizable() {
+////        print(one)
+////        print("Congratulations!")
+//    } else {
+////        print("You haven't prize")
+//    }
+//}
+//
+//award(one: basketball)
+//
+//struct Student: CustomStringConvertible, Equatable, Comparable, Prizable{
+//    var name: String
+//    var score: Int
+//    var description: String{
+//        return name + "Score: " + String(score)
+//    }
+//    
+//    func isPrizable() -> Bool {
+//        return score >= 60
+//    }
+//}
+//func ==(s1:Student,s2:Student) -> Bool{ return s1.score == s2.score}
+//func <(s1:Student,s2:Student) -> Bool{ return s1.score < s2.score}
+//
+//let a = Student(name: "Alice", score: 80)
+//let b = Student(name: "Bob", score: 92)
+//let c = Student(name: "Karl", score: 85)
+//let ameba = Student(name: "ameba", score: 71)
+//
+//let students = [a, b, c, ameba]
+//award(one: ameba)
+
+
+//func topOne<T: Comparable>(seq: [T]) -> T {
+//    assert(seq.count > 0)
+////    var max = seq[0]
+////    for i in 0..<seq.count {
+////        if seq[i] > max {
+////            max = seq[i]
+////        }
+////    }
+////    return max
+//    return seq.reduce(seq[0]) { max($0, $1) }
+//}
+
+//let arr = [3,2,145,43,226,74]
+//topOne(seq: arr)
+//
+//func topPrizeAbleOne<T: Comparable & Prizable>(seq: [T]) -> T? {
+//    return seq.reduce(nil) { (temp: T?, contender: T)  in
+//        
+//        guard contender.isPrizable() else {
+//            return temp
+//        }
+//        
+//        guard let temp = temp else {
+//            return contender
+//        }
+//        
+//        return max(temp, contender)
+//    }
+//}
+//
+//topPrizeAbleOne(seq: students)
