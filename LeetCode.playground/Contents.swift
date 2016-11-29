@@ -242,8 +242,7 @@ Inspired by @naveed.zafar at https://leetcode.com/discuss/10947/accepted-c-o-n-s
 //            }
 //        }
 //        return arr
-//    }
-//    
+//
 //    //冒泡排序 -> 升级版 快速排序
 //    class func bubbleSort(var arr: [Int]) -> [Int] {
 //        for var i = 0; i < arr.count; i++ {
@@ -255,12 +254,13 @@ Inspired by @naveed.zafar at https://leetcode.com/discuss/10947/accepted-c-o-n-s
 //        }
 //        return arr
 //    }
-//    
-//    //选择排序 -> 升级版 堆排序
-//    class func selectSort(var arr: [Int]) -> [Int] {
-//        for var i = 0; i < arr.count - 1; i++ {
+//
+    //选择排序 -> 升级版 堆排序
+//   static func selectSort(arr: [Int]) -> [Int] {
+//    var arr = arr
+//        for i in 0 ..< arr.count - 1 {
 //            var min = i
-//            for var j = i + 1; j < arr.count; j++ {
+//            for j in i + 1 ..< arr.count {
 //                if arr[min] > arr[j] {
 //                    min = j
 //                }
@@ -271,7 +271,7 @@ Inspired by @naveed.zafar at https://leetcode.com/discuss/10947/accepted-c-o-n-s
 //        }
 //        return arr
 //    }
-//    
+//
 //    
     //插入排序 -> 升级版 希尔排序
 //    class func insertSort(var arr: [Int]) -> [Int] {
@@ -290,7 +290,8 @@ Inspired by @naveed.zafar at https://leetcode.com/discuss/10947/accepted-c-o-n-s
 
 //let result1 = Sort.simpleSort([57,93,77,23,90,100])
 //let result2 = Sort.bubbleSort([57,93,77,23,90,100])
-//let result3 = Sort.selectSort([57,93,77,23,90,100])
+//let result3 = Sort.selectSort(arr: [57,93,77,23,90,100])
+//print(result3)
 //let result4 = Sort.insertSort([57,93,77,23,90,100])
 
 
@@ -1098,16 +1099,16 @@ Inspired by @naveed.zafar at https://leetcode.com/discuss/10947/accepted-c-o-n-s
 //toBinary(8)
 //
 //func swapTwoInts(inout num1: Int, inout _ num2: Int) {
-////    let t = num1
-////    num1 = num2
-////    num2 = t
+//    let t = num1
+//    num1 = num2
+//    num2 = t
 //    (num1, num2) = (num2, num1)
 //}
 //
 //var x = 1
 //var y = 2
 //swapTwoInts(&x, &y)
-////swap(&x, &y)
+//swap(&x, &y)
 //x
 //y
 //
@@ -1253,7 +1254,7 @@ Inspired by @naveed.zafar at https://leetcode.com/discuss/10947/accepted-c-o-n-s
 //    case Multiplication(ArithmeticExpression, ArithmeticExpression)
 //}
 //
-////(5 + 4) * 2
+//(5 + 4) * 2
 //let five = ArithmeticExpression.Number(5)
 //let four = ArithmeticExpression.Number(4)
 //let sum = ArithmeticExpression.Addition(five, four)
@@ -1576,12 +1577,12 @@ Inspired by @naveed.zafar at https://leetcode.com/discuss/10947/accepted-c-o-n-s
 //func + (left: Vector, right: Vector) -> Vector {
 //    return Vector(x: left.x + right.x, y: left.y + right.y, z: left.z + right.z)
 //}
-////va + vb
+//va + vb
 //
 //prefix func - (vector: Vector) -> Vector {
 //    return Vector(x: -vector.x, y: -vector.y, z: -vector.z)
 //}
-////-va
+//-va
 //
 //func < (left: Vector, right: Vector) -> Bool {
 //    if left.x != right.x { return left.x < right.x }
@@ -1762,11 +1763,11 @@ Inspired by @naveed.zafar at https://leetcode.com/discuss/10947/accepted-c-o-n-s
 //    }
     
 //    subscript(index: Int) -> Int {
-////        var decimalBase = 1
-////        for _ in 1...index {
-////            decimalBase *= 10
-////        }
-////        return (self / decimalBase) % 10
+//        var decimalBase = 1
+//        for _ in 1...index {
+//            decimalBase *= 10
+//        }
+//        return (self / decimalBase) % 10
 //        
 //        var s = String(self)
 //        let l = s.characters.count - 1
@@ -1939,7 +1940,7 @@ Inspired by @naveed.zafar at https://leetcode.com/discuss/10947/accepted-c-o-n-s
 //basketball.winningPercent()
 //basketball.shootWins()
 //basketball.gamePlayed
-////print(basketball.descriptionWithDate)
+//print(basketball.descriptionWithDate)
 //
 //let football = FootballRecord(wins: 5, loses: 2, ties: 3)
 //football.winningPercent()
@@ -1948,10 +1949,10 @@ Inspired by @naveed.zafar at https://leetcode.com/discuss/10947/accepted-c-o-n-s
 
 //func award(one: Prizable & CustomStringConvertible) {
 //    if one.isPrizable() {
-////        print(one)
-////        print("Congratulations!")
+//        print(one)
+//        print("Congratulations!")
 //    } else {
-////        print("You haven't prize")
+//        print("You haven't prize")
 //    }
 //}
 //
@@ -1982,13 +1983,13 @@ Inspired by @naveed.zafar at https://leetcode.com/discuss/10947/accepted-c-o-n-s
 
 //func topOne<T: Comparable>(seq: [T]) -> T {
 //    assert(seq.count > 0)
-////    var max = seq[0]
-////    for i in 0..<seq.count {
-////        if seq[i] > max {
-////            max = seq[i]
-////        }
-////    }
-////    return max
+//    var max = seq[0]
+//    for i in 0..<seq.count {
+//        if seq[i] > max {
+//            max = seq[i]
+//        }
+//    }
+//    return max
 //    return seq.reduce(seq[0]) { max($0, $1) }
 //}
 
@@ -2010,4 +2011,5 @@ Inspired by @naveed.zafar at https://leetcode.com/discuss/10947/accepted-c-o-n-s
 //    }
 //}
 //
-//topPrizeAbleOne(seq: students)
+//topPrizeAbleOne(seq: students)}
+//    
