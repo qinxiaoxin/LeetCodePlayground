@@ -1,6 +1,6 @@
 //: Playground - noun: a place where people can play
 
-//import UIKit
+import UIKit
 
 //选择排序
 //func selectSort<T: Comparable>(arr: [T], count: Int) -> [T] {
@@ -33,16 +33,12 @@
 //    
 //    for i in 1 ..< count {
 //        
-//        let temp = arr[i]
+//        var j = i
+//        let temp = arr[j]
 //        
-//        let j = 0
-//        
-//        for j in stride(from: i, to: 0, by: -1) {
-//            print(j)
-//            if arr[j - 1] > temp {
-//                print(arr[j - 1], temp)
-//                arr[j] = arr[j - 1]
-//            }
+//        while j > 0 && arr[j - 1] > temp {
+//            arr[j] = arr[j - 1]
+//            j -= 1
 //        }
 //        
 //        arr[j] = temp
@@ -67,6 +63,33 @@
 //        return result
 //    }
 //}
-//
+
 //var arr = SortTestHelper.generateRandomArray(n: 5, rangeL: 66, rangeR: 120)
-//arr
+//insertSort(arr: arr, count: 5)
+
+//let orignArray: [Any] = [1,[4,3],6,[5,[1,0]]]
+//
+//func allObject() -> [Int] {
+//    var result = [Int]()
+//    fillArray(array: orignArray, into: &result)
+//    return result
+//}
+//
+//func fillArray(array: [Any], into: inout [Int]) {
+//    
+//    for i in array {
+//        
+//        switch i {
+//        case let item as Array<Any>:
+//            fillArray(array: item, into: &into)
+//            break
+//        default:
+//            into.append(i as! Int)
+//            break
+//        }
+//        
+//    }
+//
+//}
+//
+//allObject()
