@@ -2,6 +2,7 @@
 
 import UIKit
 import PlaygroundSupport
+import Foundation
 
 //for i in 1 ..< 10 {
 //    print(i)
@@ -102,3 +103,28 @@ import PlaygroundSupport
 //
 //let user1 = login(username: "qinxin", password: "xiaoxin123") %% generateName()
 //let user2 = login(username: "ameba", password: "5986461") %% "Guest"
+
+
+/* 
+ 
+输入例子:
+[[1, 2, 3, 4, 2], 2]
+
+输出例子:
+[1, 3, 4]
+ 
+*/
+
+//func removeArr(arr: [Int], item: Int) -> [Int] {
+//    var result: [Int] = [Int]()
+//    result = arr.filter{ $0 != item }
+//    return result
+//}
+//
+//var arr: [Any] = [[1, 2, 3, 4, 2], 2]
+//arr = removeArr(arr: arr[0] as! [Int], item: arr[1] as! Int)
+
+let f: Int8 = 127
+let ff: CGFloat = 2.33333333333
+
+print("f = \(f) ff = \(ff)")
