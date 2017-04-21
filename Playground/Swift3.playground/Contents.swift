@@ -124,7 +124,3 @@ import Foundation
 //var arr: [Any] = [[1, 2, 3, 4, 2], 2]
 //arr = removeArr(arr: arr[0] as! [Int], item: arr[1] as! Int)
 
-let f: Int8 = 127
-let ff: CGFloat = 2.33333333333
-
-print("f = \(f) ff = \(ff)")
